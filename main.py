@@ -1,6 +1,25 @@
 import tkinter as tk
-from tkinter import *
-from PIL import Image, ImageTk
+"""from PIL import ImageTk, Image
+
+#This creates the main window of an application
+window = tk.Tk()
+window.title("Join")
+window.geometry("300x300")
+window.configure(background='grey')
+
+path = "kerchoo.png"
+
+#Creates a Tkinter-compatible photo image, which can be used everywhere Tkinter expects an image object.
+img = ImageTk.PhotoImage(Image.open(path))
+
+#The Label widget is a standard Tkinter widget used to display a text or image on the screen.
+panel = tk.Label(window, image = img)
+
+#The Pack geometry manager packs widgets in rows or columns.
+panel.pack(side = "bottom", fill = "both", expand = "yes")
+
+#Start the GUI
+window.mainloop()"""
 
 failsafe = False
 goodgood = {"good"}
@@ -16,11 +35,10 @@ def click():
     while failsafe == True:
         wow = input("is heelo good or bad?\n>> ")
         if wow in goodgood:
-            print("kerchoo")
-            Image.open("kerchoo.png")
+            print("happy happy happy")
             failsafe = False
         elif wow in nono:
-            print("sobbing crying throwing up\nkathew")
+            print("sobbing crying throwing up\nsad sad sad")
             failsafe = False
         elif wow in santa:
             print("woah santa...\nnow answer my question")
@@ -31,12 +49,16 @@ def click():
         else:
             print("that not what I asked doofus")
             failsafe = True
-
+def lightning():
+    print("kerchoo")
+    
 hello = tk.Label(text="peepeepoopoo")
 hello.pack()
-button = tk.Button(text="smash me",
+b1 = tk.Button(text="smash me",
                   command=click)
-
-button.pack()
+b2 = tk.Button(text="kerchoo",
+              command=lightning)
+b1.pack()
+b2.pack()
 
 tk.mainloop()
