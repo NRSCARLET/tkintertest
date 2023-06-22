@@ -73,3 +73,4 @@ button = tk.Button(text="smash me",
 button.pack()
 
 tk.mainloop()
+print("image no worky")
