@@ -20,21 +20,6 @@ panel.pack(side = "bottom", fill = "both", expand = "yes")
 
 #Start the GUI
 window.mainloop()"""
-from tkinter import *
-from PIL import Image, ImageTk
-
-root = Tk()
-
-# Create a photoimage object of the image in the path
-image1 = Image.open("kerchoo.png")
-test = ImageTk.PhotoImage(image1)
-
-label1 = tkinter.Label(image=test)
-label1.image = test
-
-# Position image
-label1.place(x=300, y=300)
-root.mainloop()
 
 failsafe = False
 goodgood = {"good"}
@@ -67,10 +52,11 @@ def click():
 
 hello = tk.Label(text="peepeepoopoo")
 hello.pack()
-button = tk.Button(text="smash me",
+b1 = tk.Button(text="smash me",
                   command=click)
-
-button.pack()
+b2 = tk.Button(text="kerchoo")
+b1.pack()
+b2.pack()
 
 tk.mainloop()
 print("image no worky")
