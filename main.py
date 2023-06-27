@@ -50,7 +50,15 @@ def click():
             print("that not what I asked doofus")
             failsafe = True
 def lightning():
-    print("kerchoo")
+    from PIL import Image, ImageTk
+# open image using PIL
+    image = Image.open("kerchoo2.png")
+# convert image to PhotoImage object
+    photo = ImageTk.PhotoImage(image)
+# create label that displays the image
+    label = tk.Label(image=photo)
+    label.pack()
+    window.mainloop()
     
 hello = tk.Label(text="peepeepoopoo")
 hello.pack()
